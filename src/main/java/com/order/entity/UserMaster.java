@@ -1,5 +1,7 @@
 package com.order.entity;
 
+import com.order.model.UserModel;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -24,6 +26,19 @@ public class UserMaster {
 	
 	@Column(name="address")
 	String address;
+
+	public UserMaster() {
+		super();
+	}
+	
+	public UserMaster(UserModel userModel) {
+		super();
+		this.userId = userModel.getUserId();
+		this.firstName = userModel.getFirstName();
+		this.lastName = userModel.getLastName();
+		this.mobile = userModel.getMobile();
+		this.address = userModel.getAddress();
+	}
 
 	public String getUserId() {
 		return userId;

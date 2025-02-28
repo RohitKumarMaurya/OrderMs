@@ -36,6 +36,14 @@ public class Constants {
 	public static final String DATE_PATTERN = "yyyy-MM-dd HH:mm:ss";
 
 	public static final String INVALID_USER = "INVALID_USER";
+
+	public static final String INVALID_USER_DATA = "INVALID_USER_DATA";
+
+	public static final String INVALID_ITEM_DATA = "INVALID_ITEM_DATA";
+	
+	public static final String NO_USERS_FOUND = "NO_USERS_FOUND";
+
+	public static final String NO_ITEMS_FOUND = "NO_ITEMS_FOUND";
 	
 	static {
 		ERR_MAP.put(MISMATCH, "Items Mismatch");
@@ -45,6 +53,10 @@ public class Constants {
 		ERR_MAP.put(NOT_FOUND, "Order not found");
 		ERR_MAP.put(NO_DATA_FOUND, "No Orders Found");
 		ERR_MAP.put(INVALID_USER, "Invalid user");
+		ERR_MAP.put(INVALID_USER_DATA, "User Data Incomplete");
+		ERR_MAP.put(INVALID_ITEM_DATA, "Item Data Incomplete");
+		ERR_MAP.put(NO_USERS_FOUND, "No Users Found");
+		ERR_MAP.put(NO_ITEMS_FOUND, "No Items Found");
 		
 		STATUS_MAP.put(REC, "Pending");
 		STATUS_MAP.put(IP, "Processing");

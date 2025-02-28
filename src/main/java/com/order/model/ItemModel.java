@@ -1,5 +1,8 @@
 package com.order.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.order.entity.ItemMaster;
+
 public class ItemModel {
 
 	String itemId;
@@ -13,13 +16,21 @@ public class ItemModel {
 	public ItemModel() {
 		super();
 	}
-	
+
 	public ItemModel(String itemId, String itemName, double itemRate, int itemQty) {
 		super();
 		this.itemId = itemId;
 		this.itemName = itemName;
 		this.itemRate = itemRate;
 		this.itemQty = itemQty;
+	}
+	
+	public ItemModel(ItemMaster itemMaster) {
+		super();
+		this.itemId = itemMaster.getItemId();
+		this.itemName = itemMaster.getitemName();
+		this.itemRate = itemMaster.getItemRate();
+		this.itemQty = itemMaster.getItemQty();
 	}
 
 	public String getItemId() {
@@ -53,10 +64,15 @@ public class ItemModel {
 	public void setItemQty(int itemQty) {
 		this.itemQty = itemQty;
 	}
-	
+
 	@Override
 	public String toString() {
 		return "ItemDAO [itemId=" + itemId + ", itemName=" + itemName + ", itemRate=" + itemRate + ", itemQty="
 				+ itemQty + "]";
+	}
+
+	@JsonIgnore
+	public boolean isValid() {
+		return null != this.itemId && null != this.itemName && 0 != this.itemRate && 0 != this.itemQty;
 	}
 }

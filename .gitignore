@@ -12,7 +12,8 @@ target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
-
+activemq-data/
+*.log
 ### STS ###
 .apt_generated
 .classpath

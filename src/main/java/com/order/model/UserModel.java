@@ -1,5 +1,8 @@
 package com.order.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.order.entity.UserMaster;
+
 public class UserModel {
 
 	String userId;
@@ -11,6 +14,19 @@ public class UserModel {
 	String mobile;
 
 	String address;
+
+	public UserModel() {
+		super();
+	}
+
+	public UserModel(UserMaster userMaster) {
+		super();
+		this.userId = userMaster.getUserId();
+		this.firstName = userMaster.getFirstName();
+		this.lastName = userMaster.getLastName();
+		this.mobile = userMaster.getMobile();
+		this.address = userMaster.getAddress();
+	}
 
 	public String getUserId() {
 		return userId;
@@ -56,5 +72,11 @@ public class UserModel {
 	public String toString() {
 		return "UserDAO [userId=" + userId + ", firstName=" + firstName + ", lastName=" + lastName + ", mobile="
 				+ mobile + ", address=" + address + "]";
+	}
+
+	@JsonIgnore
+	public boolean isValid() {
+		return null != this.userId && null != this.firstName && null != this.lastName && null != this.mobile
+				&& null != this.address;
 	}
 }

@@ -2,6 +2,8 @@ package com.order.entity;
 
 import java.time.LocalDateTime;
 
+import com.order.model.ItemModel;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -29,6 +31,20 @@ public class ItemMaster {
 
 	@Column(name = "updatetmstmp")
 	LocalDateTime updateTimeStamp;
+	
+	public ItemMaster() {
+		super();
+	}
+	
+	public ItemMaster(ItemModel itemModel) {
+		super();
+		this.itemId = itemModel.getItemId();
+		this.itemName = itemModel.getitemName();
+		this.itemRate = itemModel.getItemRate();
+		this.itemQty = itemModel.getItemQty();
+		this.insertTimeStamp = LocalDateTime.now();
+		this.updateTimeStamp = LocalDateTime.now();
+	}
 
 	public String getItemId() {
 		return itemId;
