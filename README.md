@@ -110,6 +110,8 @@ f. maintained ER status for orders , for any business validation error.
 
 url : http://orderms-env.eba-wxgwg2hv.ap-south-1.elasticbeanstalk.com/
 
+Public url is subject to change is restart of env is done
+
 # Postman collection
 
 Available in Repository as OrderMs.postman_collection.json
