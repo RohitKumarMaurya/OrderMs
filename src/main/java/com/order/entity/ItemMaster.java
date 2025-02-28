@@ -6,6 +6,8 @@ import com.order.model.ItemModel;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
@@ -14,6 +16,7 @@ import jakarta.persistence.Table;
 public class ItemMaster {
 
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "itemid")
 	String itemId;
 
@@ -38,7 +41,6 @@ public class ItemMaster {
 	
 	public ItemMaster(ItemModel itemModel) {
 		super();
-		this.itemId = itemModel.getItemId();
 		this.itemName = itemModel.getitemName();
 		this.itemRate = itemModel.getItemRate();
 		this.itemQty = itemModel.getItemQty();

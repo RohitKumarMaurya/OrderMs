@@ -14,6 +14,7 @@ target/
 !**/src/test/**/target/
 activemq-data/
 *.log
+*.log*
 ### STS ###
 .apt_generated
 .classpath

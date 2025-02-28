@@ -73,6 +73,6 @@ public class ItemModel {
 
 	@JsonIgnore
 	public boolean isValid() {
-		return null != this.itemId && null != this.itemName && 0 != this.itemRate && 0 != this.itemQty;
+		return null != this.itemName && 0 != this.itemRate && 0 != this.itemQty;
 	}
 }
