@@ -52,6 +52,7 @@ public class OrderConsumer {
     }
 	
 	public int processOrder(String message) {
+		LOGGER.info("processOrder : {}", message);
 		OrderModel orderModel = gson.fromJson(message, OrderModel.class);
 		Orders order = new Orders(orderModel, gson.toJson(orderModel.getItems()));
 		Optional<OrderTracker> opt = orderTrackerDAO.findById(order.getOrderId());

@@ -15,9 +15,7 @@ public class OrderModel {
 
 	double totalAmount;
 
-	String insertTimeStamp;
-
-	String updateTimeStamp;
+	String orderTime;
 
 	public OrderModel() {
 		super();
@@ -28,10 +26,9 @@ public class OrderModel {
 		Gson gson = new Gson();
 		this.orderId = order.getOrderId();
 		this.userId = order.getUserId();
-		this.items = (List<ItemModel>) gson.fromJson(order.getItems(), ItemModel.class);
+		this.items = (List<ItemModel>) gson.fromJson(order.getItems(), List.class);
 		this.totalAmount = order.getTotalAmount();
-		this.insertTimeStamp = order.getInsertTimeStamp().toString();
-		this.updateTimeStamp = order.getUpdateTimeStamp().toString();
+		this.orderTime = order.getInsertTimeStamp().toString();
 	}
 
 	public String getOrderId() {
@@ -66,25 +63,17 @@ public class OrderModel {
 		this.totalAmount = totalAmount;
 	}
 
-	public String getInsertTimeStamp() {
-		return insertTimeStamp;
+	public String getOrderTime() {
+		return orderTime;
 	}
 
-	public void setInsertTimeStamp(String insertTimeStamp) {
-		this.insertTimeStamp = insertTimeStamp;
-	}
-
-	public String getUpdateTimeStamp() {
-		return updateTimeStamp;
-	}
-
-	public void setUpdateTimeStamp(String updateTimeStamp) {
-		this.updateTimeStamp = updateTimeStamp;
+	public void setOrderTime(String orderTime) {
+		this.orderTime = orderTime;
 	}
 
 	@Override
 	public String toString() {
 		return "OrderDAO [orderId=" + orderId + ", userId=" + userId + ", items=" + items + ", totalAmount=" + totalAmount
-				+ ", insertTimeStamp=" + insertTimeStamp + ", updateTimeStamp=" + updateTimeStamp + "]";
+				+ ", orderTime=" + orderTime + "]";
 	}
 }

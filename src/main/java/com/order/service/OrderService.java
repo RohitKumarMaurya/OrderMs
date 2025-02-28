@@ -10,4 +10,6 @@ public interface OrderService {
 
 	OrderTrackerModel getOrderStatus(String orderId);
 
+	OrderModel getOrderDetails(String orderId);
+
 }

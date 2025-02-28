@@ -4,7 +4,7 @@ public class ResponseModel<T> {
 	
 	int status;
 	
-	T obj;
+	T data;
 
 	public int getStatus() {
 		return status;
@@ -14,16 +14,16 @@ public class ResponseModel<T> {
 		this.status = status;
 	}
 
-	public T getObj() {
-		return obj;
+	public T getData() {
+		return data;
 	}
 
-	public void setObj(T obj) {
-		this.obj = obj;
+	public void setData(T data) {
+		this.data = data;
 	}
 
 	@Override
 	public String toString() {
-		return "ResponseDAO [status=" + status + ", obj=" + obj + "]";
+		return "ResponseDAO [status=" + status + ", data=" + data + "]";
 	}
 }

@@ -8,9 +8,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.google.gson.Gson;
+import com.order.dao.OrderDAO;
 import com.order.dao.OrderTrackerDAO;
 import com.order.dao.UserDAO;
 import com.order.entity.OrderTracker;
+import com.order.entity.Orders;
 import com.order.entity.UserMaster;
 import com.order.exception.OrderException;
 import com.order.model.OrderModel;
@@ -32,6 +34,9 @@ public class OrderServiceImpl implements OrderService {
 	
 	@Autowired
 	private UserDAO userDAO;
+	
+	@Autowired
+	private OrderDAO orderDAO;
 
 	@Override
 	public OrderTrackerModel createOrder(OrderModel order) throws OrderException {
@@ -63,6 +68,15 @@ public class OrderServiceImpl implements OrderService {
 		Optional<OrderTracker> orderOptional = orderTrackerDAO.findById(orderId);
 		if(orderOptional.isPresent()) {
 			return new OrderTrackerModel(orderOptional.get());
+		}
+		return null;
+	}
+
+	@Override
+	public OrderModel getOrderDetails(String orderId) {
+		Optional<Orders> order = orderDAO.findById(orderId);
+		if(order.isPresent()) {
+			return new OrderModel(order.get());
 		}
 		return null;
 	}

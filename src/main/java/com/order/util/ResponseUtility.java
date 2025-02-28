@@ -14,7 +14,7 @@ public class ResponseUtility {
 	public String setSuccessResponse(Object obj) {
 		ResponseModel<Object> response = new ResponseModel<>();
 		response.setStatus(1);
-		response.setObj(obj);
+		response.setData(obj);
 		return gson.toJson(response);
 	}
 

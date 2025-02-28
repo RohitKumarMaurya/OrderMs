@@ -87,4 +87,32 @@ public class OrderRest {
 			LOGGER.info("Exiting getOrderStatus at {}", System.currentTimeMillis());
 		}
 	}
+	
+	@GetMapping(value = "/getDetails")
+	public ResponseEntity<?> getOrderDetails(@RequestParam String orderId){
+		LOGGER.info("Entered getOrderDetails at {}", System.currentTimeMillis());
+		try {
+			if(null != orderId) {
+				OrderModel orderModel = orderService.getOrderDetails(orderId);
+				if(null != orderModel) {
+					String response = responseUtility.setSuccessResponse(orderModel);
+					return new ResponseEntity<>(response, HttpStatus.OK);
+				} else {
+					throw new OrderException(Constants.NOT_FOUND);
+				}
+			} else {
+				throw new OrderException(Constants.INVALID_ID);
+			}
+		} catch(OrderException oe) {
+			LOGGER.debug("OrderException in getOrderDetails {}", oe);
+			ErrorModel response = responseUtility.setFailureResponse(oe);
+			return new ResponseEntity<>(response, HttpStatus.OK);
+		} catch(Exception e) {
+			LOGGER.error("Exception in getOrderDetails {}", e);
+			ErrorModel response = responseUtility.setFailureResponse(new OrderException(Constants.SYS));
+			return new ResponseEntity<>(response, HttpStatus.OK);
+		} finally {
+			LOGGER.info("Exiting getOrderDetails at {}", System.currentTimeMillis());
+		}
+	}
 }
