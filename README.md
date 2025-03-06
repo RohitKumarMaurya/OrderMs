@@ -108,7 +108,7 @@ f. maintained ER status for orders , for any business validation error.
 
 # Hosted on AWS Elastic Beanstalk
 
-url : http://orderms-env.eba-wxgwg2hv.ap-south-1.elasticbeanstalk.com/
+url : http://orderms-env-new.eba-s26jfzsn.ap-south-1.elasticbeanstalk.com/
 
 Public url is subject to change is restart of env is done
 
@@ -120,7 +120,7 @@ Available in Repository as OrderMs.postman_collection.json
 		"info": {
 			"_postman_id": "3bafa89d-0476-4253-ad50-b2468a5c96c8",
 			"name": "OrderMs",
-			"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+			"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
 			"_exporter_id": "42720500"
 		},
 		"item": [
@@ -141,21 +141,7 @@ Available in Repository as OrderMs.postman_collection.json
 							}
 						}
 					},
-					"url": {
-						"raw": "http://orderms-env.eba-wxgwg2hv.ap-south-1.elasticbeanstalk.com/user/create",
-						"protocol": "http",
-						"host": [
-							"orderms-env",
-							"eba-wxgwg2hv",
-							"ap-south-1",
-							"elasticbeanstalk",
-							"com"
-						],
-						"path": [
-							"user",
-							"create"
-						]
-					}
+					"url": "http://orderms-env-new.eba-s26jfzsn.ap-south-1.elasticbeanstalk.com/user/create"
 				},
 				"response": []
 			},
@@ -167,21 +153,7 @@ Available in Repository as OrderMs.postman_collection.json
 					},
 					"method": "GET",
 					"header": [],
-					"url": {
-						"raw": "http://orderms-env.eba-wxgwg2hv.ap-south-1.elasticbeanstalk.com/user/getAll",
-						"protocol": "http",
-						"host": [
-							"orderms-env",
-							"eba-wxgwg2hv",
-							"ap-south-1",
-							"elasticbeanstalk",
-							"com"
-						],
-						"path": [
-							"user",
-							"getAll"
-						]
-					}
+					"url": "http://orderms-env-new.eba-s26jfzsn.ap-south-1.elasticbeanstalk.com/user/getAll"
 				},
 				"response": []
 			},
@@ -202,21 +174,7 @@ Available in Repository as OrderMs.postman_collection.json
 							}
 						}
 					},
-					"url": {
-						"raw": "http://orderms-env.eba-wxgwg2hv.ap-south-1.elasticbeanstalk.com/item/create",
-						"protocol": "http",
-						"host": [
-							"orderms-env",
-							"eba-wxgwg2hv",
-							"ap-south-1",
-							"elasticbeanstalk",
-							"com"
-						],
-						"path": [
-							"item",
-							"create"
-						]
-					}
+					"url": "http://orderms-env-new.eba-s26jfzsn.ap-south-1.elasticbeanstalk.com/item/create"
 				},
 				"response": []
 			},
@@ -228,21 +186,7 @@ Available in Repository as OrderMs.postman_collection.json
 					},
 					"method": "GET",
 					"header": [],
-					"url": {
-						"raw": "http://orderms-env.eba-wxgwg2hv.ap-south-1.elasticbeanstalk.com/item/getAll",
-						"protocol": "http",
-						"host": [
-							"orderms-env",
-							"eba-wxgwg2hv",
-							"ap-south-1",
-							"elasticbeanstalk",
-							"com"
-						],
-						"path": [
-							"item",
-							"getAll"
-						]
-					}
+					"url": "http://orderms-env-new.eba-s26jfzsn.ap-south-1.elasticbeanstalk.com/item/getAll"
 				},
 				"response": []
 			},
@@ -263,20 +207,7 @@ Available in Repository as OrderMs.postman_collection.json
 							}
 						}
 					},
-					"url": {
-						"raw": "http://orderms-env.eba-wxgwg2hv.ap-south-1.elasticbeanstalk.com/order",
-						"protocol": "http",
-						"host": [
-							"orderms-env",
-							"eba-wxgwg2hv",
-							"ap-south-1",
-							"elasticbeanstalk",
-							"com"
-						],
-						"path": [
-							"order"
-						]
-					}
+					"url": "http://orderms-env-new.eba-s26jfzsn.ap-south-1.elasticbeanstalk.com/order"
 				},
 				"response": []
 			},
@@ -289,11 +220,11 @@ Available in Repository as OrderMs.postman_collection.json
 					"method": "GET",
 					"header": [],
 					"url": {
-						"raw": "http://orderms-env.eba-wxgwg2hv.ap-south-1.elasticbeanstalk.com/order/status?orderId=791c85a3-7dfa-4524-ba25-1b101ca234a7",
+						"raw": "http://orderms-env-new.eba-s26jfzsn.ap-south-1.elasticbeanstalk.com/order/status?orderId=5a71dbe6-badc-4f6a-93ee-1c01c9031fde",
 						"protocol": "http",
 						"host": [
-							"orderms-env",
-							"eba-wxgwg2hv",
+							"orderms-env-new",
+							"eba-s26jfzsn",
 							"ap-south-1",
 							"elasticbeanstalk",
 							"com"
@@ -305,7 +236,7 @@ Available in Repository as OrderMs.postman_collection.json
 						"query": [
 							{
 								"key": "orderId",
-								"value": "791c85a3-7dfa-4524-ba25-1b101ca234a7"
+								"value": "5a71dbe6-badc-4f6a-93ee-1c01c9031fde"
 							}
 						]
 					}
@@ -321,11 +252,11 @@ Available in Repository as OrderMs.postman_collection.json
 					"method": "GET",
 					"header": [],
 					"url": {
-						"raw": "http://orderms-env.eba-wxgwg2hv.ap-south-1.elasticbeanstalk.com/order/getDetails?orderId=791c85a3-7dfa-4524-ba25-1b101ca234a7",
+						"raw": "http://orderms-env-new.eba-s26jfzsn.ap-south-1.elasticbeanstalk.com/order/getDetails?orderId=5a71dbe6-badc-4f6a-93ee-1c01c9031fde",
 						"protocol": "http",
 						"host": [
-							"orderms-env",
-							"eba-wxgwg2hv",
+							"orderms-env-new",
+							"eba-s26jfzsn",
 							"ap-south-1",
 							"elasticbeanstalk",
 							"com"
@@ -337,7 +268,7 @@ Available in Repository as OrderMs.postman_collection.json
 						"query": [
 							{
 								"key": "orderId",
-								"value": "791c85a3-7dfa-4524-ba25-1b101ca234a7"
+								"value": "5a71dbe6-badc-4f6a-93ee-1c01c9031fde"
 							}
 						]
 					}
@@ -352,20 +283,7 @@ Available in Repository as OrderMs.postman_collection.json
 					},
 					"method": "GET",
 					"header": [],
-					"url": {
-						"raw": "http://orderms-env.eba-wxgwg2hv.ap-south-1.elasticbeanstalk.com/orderMetrics",
-						"protocol": "http",
-						"host": [
-							"orderms-env",
-							"eba-wxgwg2hv",
-							"ap-south-1",
-							"elasticbeanstalk",
-							"com"
-						],
-						"path": [
-							"orderMetrics"
-						]
-					}
+					"url": "http://orderms-env-new.eba-s26jfzsn.ap-south-1.elasticbeanstalk.com/orderMetrics"
 				},
 				"response": []
 			},
@@ -377,20 +295,7 @@ Available in Repository as OrderMs.postman_collection.json
 					},
 					"method": "POST",
 					"header": [],
-					"url": {
-						"raw": "http://orderms-env.eba-wxgwg2hv.ap-south-1.elasticbeanstalk.com/loadTest",
-						"protocol": "http",
-						"host": [
-							"orderms-env",
-							"eba-wxgwg2hv",
-							"ap-south-1",
-							"elasticbeanstalk",
-							"com"
-						],
-						"path": [
-							"loadTest"
-						]
-					}
+					"url": "http://orderms-env-new.eba-s26jfzsn.ap-south-1.elasticbeanstalk.com/loadTest"
 				},
 				"response": []
 			}
